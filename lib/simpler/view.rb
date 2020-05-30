@@ -10,12 +10,23 @@ module Simpler
     end
 
     def render(binding)
-      template = File.read(template_path)
-
-      ERB.new(template).result(binding)
+      if template && template.class == Hash
+        send("render_#{template.keys[0]}")
+      else
+        render_view(binding)
+      end
     end
 
     private
+
+    def render_plain
+      template[:plain] if template && template.class == Hash
+    end
+
+    def render_view
+      template = File.read(template_path)
+      ERB.new(template).result(binding)
+    end
 
     def controller
       @env['simpler.controller']
