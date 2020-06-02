@@ -1,0 +1,16 @@
+I, [2020-06-02T23:12:44.312972 #11980]  INFO -- : Request: GET
+ /tests/3
+Handler: TestsController# show
+Parameters: {:id=>"3"}
+Response: 200 OK
+ [text/html] 
+I, [2020-06-02T23:13:28.555659 #12074]  INFO -- : 
+Request: GET /tests/3
+Handler: TestsController# show
+Parameters: {:id=>"3"}
+Response: 200 OK [text/html] 
+I, [2020-06-02T23:14:18.839292 #12158]  INFO -- : 
+Request: GET /tests/3
+Handler: TestsController#show
+Parameters: {:id=>"3"}
+Response: 200 OK [text/html] 

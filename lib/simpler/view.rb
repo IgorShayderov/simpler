@@ -23,7 +23,7 @@ module Simpler
       template[:plain]
     end
 
-    def render_html
+    def render_html(binding)
       template = File.read(template_path)
       ERB.new(template).result(binding)
     end
