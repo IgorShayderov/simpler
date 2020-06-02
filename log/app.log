@@ -14,3 +14,93 @@ Request: GET /tests/3
 Handler: TestsController#show
 Parameters: {:id=>"3"}
 Response: 200 OK [text/html] 
+I, [2020-06-02T23:21:11.072824 #12542]  INFO -- : 
+Request: GET /hz
+Handler: TestsController#show
+Parameters: {:id=>"hz"}
+Response: 200 OK [text/html] 
+I, [2020-06-02T23:37:34.974154 #13542]  INFO -- : 
+Request: GET /tests/3
+Handler: TestsController#show
+Parameters: {:id=>"3"}
+Response: 200 OK [text/html] 
+I, [2020-06-02T23:38:10.403620 #13633]  INFO -- : 
+Request: GET /tests/3
+Handler: TestsController#show
+Parameters: {:id=>"3"}
+Response: 200 OK [text/html] 
+I, [2020-06-02T23:48:34.861249 #14224]  INFO -- : 
+Request: GET /hz/12
+Handler: NilClass#
+Parameters: {}
+Response: 404 Not Found [text/html] 
+I, [2020-06-02T23:49:46.062381 #15005]  INFO -- : 
+Request: GET /hz/12
+Handler: NilClass#
+Parameters: {}
+Response: 404 Not Found [text/html] 
+I, [2020-06-02T23:50:16.265990 #15489]  INFO -- : 
+Request: GET /hz/12
+Handler: NilClass#
+Parameters: {}
+Response: 404 Not Found [text/html] 
+I, [2020-06-02T23:51:00.464041 #15489]  INFO -- : 
+Request: GET /tests/12
+Handler: NilClass#
+Parameters: {}
+Response: 404 Not Found [text/html] 
+I, [2020-06-03T00:21:31.748945 #17674]  INFO -- : 
+Request: GET /tests/12
+Handler: TestsController#index
+Parameters: {}
+Response: 200 OK [text/html] 
+I, [2020-06-03T00:21:39.162082 #17674]  INFO -- : 
+Request: GET /tests/12/hz
+Handler: TestsController#index
+Parameters: {}
+Response: 200 OK [text/html] 
+I, [2020-06-03T00:23:47.179028 #17809]  INFO -- : 
+Request: GET /tests/12/hz
+Handler: TestsController#index
+Parameters: {}
+Response: 200 OK [text/html] 
+I, [2020-06-03T00:26:25.302215 #18006]  INFO -- : 
+Request: GET /tests/12
+Handler: TestsController#index
+Parameters: {}
+Response: 200 OK [text/html] 
+I, [2020-06-03T00:26:56.707063 #18064]  INFO -- : 
+Request: GET /tests/12
+Handler: TestsController#index
+Parameters: {}
+Response: 200 OK [text/html] 
+I, [2020-06-03T00:32:37.774203 #18743]  INFO -- : 
+Request: GET /tests/12
+Handler: TestsController#index
+Parameters: {}
+Response: 200 OK [text/html] 
+I, [2020-06-03T00:32:44.865158 #18743]  INFO -- : 
+Request: GET /tests/12/hz
+Handler: TestsController#index
+Parameters: {}
+Response: 200 OK [text/html] 
+I, [2020-06-03T00:34:59.265193 #18862]  INFO -- : 
+Request: GET /tests/12/hz
+Handler: NilClass#
+Parameters: {}
+Response: 404 Not Found [text/html] 
+I, [2020-06-03T00:35:04.828119 #18862]  INFO -- : 
+Request: GET /tests/12
+Handler: NilClass#
+Parameters: {}
+Response: 404 Not Found [text/html] 
+I, [2020-06-03T00:36:45.142301 #18958]  INFO -- : 
+Request: GET /tests/12
+Handler: TestsController#show
+Parameters: {:id=>"12"}
+Response: 200 OK [text/html] 
+I, [2020-06-03T00:36:49.135831 #18958]  INFO -- : 
+Request: GET /tests/12/hz
+Handler: NilClass#
+Parameters: {}
+Response: 404 Not Found [text/html] 

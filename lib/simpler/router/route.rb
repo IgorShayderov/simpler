@@ -12,7 +12,8 @@ module Simpler
       end
 
       def match?(method, path)
-        @method == method && compare_with_url(path)
+        p compare_url(path)
+        @method == method && compare_url(path)
       end
 
       def params(env)
@@ -29,9 +30,18 @@ module Simpler
 
       private
 
-      def compare_with_url(requested_url)
-        params_values = differ_parts(requested_url)
-        params_values.empty? || params_values.count == params_in_path.count
+      def compare_url(path)
+        success = true
+        request_parts = url_parts(path)
+        return false if request_parts.count != path_parts.count
+
+        path_parts.each_with_index do |part, index|
+          if part[0] != ':'
+            success = false if part != request_parts[index]
+          end
+        end
+
+        success
       end
 
       def url_parts(url)
@@ -43,7 +53,7 @@ module Simpler
       end
 
       def path_parts
-        @path.scan(/(?<=\/)\w+(?<!\/\b)/)
+        @path.scan(/(?<=\/):?\w+(?<!\/\b)/)
       end
 
       def differ_parts(url)
